@@ -22,13 +22,20 @@ router.get('/new', (req, res) => {
   })
 })
 
-// CREATE Route
 router.post('/', (req, res) => {
   const newMenu = req.body
   Menu
     .create(newMenu)
     .then(() => {
       res.redirect('/menu')
+    })
+})
+
+router.get('/:id', (req, res) => {
+  Menu
+    .findById(req.params.id)
+    .then((thisMenu) => {
+      res.render('menu/show', { thisMenu, title: `${thisMenu.name}'`})
     })
 })
 

@@ -1,0 +1,14 @@
+<h2>{{thisMenu.name}} - {{thisMenu.category}}</h2>
+<ul>
+    {{#each thisMenu.menu_section}}
+    <h2>{{name}}</h2>
+    <ul>
+        {{#each menu_items}}
+            <li>{{name}} ------------- ${{price}}</li>
+            <li>{{description}}</li>
+            {{!--
+            <img src="{{picture}}" alt=""> --}} 
+        {{/each}}
+    </ul>
+    {{/each}}
+</ul>
