@@ -1,6 +1,4 @@
 const Schema = require('mongoose').Schema
-const menuSchema = require('./menuSchema')
-const menuSectionSchema = require('./menuSectionSchema')
 
 const menuItemSchema = new Schema({
     name: {

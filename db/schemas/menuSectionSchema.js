@@ -1,5 +1,4 @@
 const Schema = require('mongoose').Schema
-const menuSchema = require('./menuSchema')
 const menuItemSchema = require('./menuItemSchema')
 
 const menuSectionSchema = new Schema({
@@ -10,4 +9,4 @@ const menuSectionSchema = new Schema({
     menu_items: [ menuItemSchema ]
 })
 
-module.exports = menuItemSchema
+module.exports = menuSectionSchema
