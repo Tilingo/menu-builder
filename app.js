@@ -6,7 +6,9 @@ var logger = require('morgan');
 const methodOverride = require('method-override')
 require('dotenv').config();
 
+//controllers
 var menuRouter = require('./routes/menuController');
+var sectionRouter = require('./routes/sectionController');
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI); 
@@ -24,8 +26,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', indexRouter);
 app.use('/menu', menuRouter);
+app.use('/section', sectionRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
