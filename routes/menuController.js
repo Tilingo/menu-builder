@@ -4,7 +4,6 @@ const Menu = require('../models/Menu')
 const Section = require('../models/MenuSection')
 const Item = require('../models/MenuItem')
 
-
 router.get('/', function(req, res, next) {
   Menu
     .find()
@@ -16,5 +15,11 @@ router.get('/', function(req, res, next) {
     })
     .catch((err) => res.send(err))
 });
+
+router.get('/new', (req, res) => {
+  res.render('menu/new', {
+    title: "New Menu"
+  })
+})
 
 module.exports = router;
