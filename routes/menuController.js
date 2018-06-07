@@ -53,4 +53,12 @@ router.put('/:id', (req, res) => {
   })
 })
 
+router.delete('/:id', (req, res) => {
+  Menu.findByIdAndRemove(req.params.id)
+    .then(() => {
+      console.log('Successfully Delete ')
+      res.redirect('/menu')
+    })
+})
+
 module.exports = router;

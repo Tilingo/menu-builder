@@ -4,12 +4,14 @@
     <h2>{{name}}</h2>
     <ul>
         {{#each menu_items}}
-            <li>{{name}} ------------- ${{price}}</li>
-            <li>{{description}}</li>
-            {{!--
-            <img src="{{picture}}" alt=""> --}} 
-        {{/each}}
+        <li>{{name}} ------------- ${{price}}</li>
+        <li>{{description}}</li>
+        {{!--
+        <img src="{{picture}}" alt=""> --}} {{/each}}
     </ul>
     {{/each}}
-    <a href="/menu/{{thisMenu._id}}/edit">Edit menu</a>
+    <a href="/menu/{{thisMenu._id}}/edit">Edit Menu</a>
+    <form action="/menu/{{thisMenu._id}}?_method=DELETE" method="POST">
+        <button type="submit">Delete Menu</button>
+    </form>
 </ul>
