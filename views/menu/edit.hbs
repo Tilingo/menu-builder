@@ -1,0 +1,20 @@
+<h1>Edit Menu</h1>
+
+<form action="/homework/{{menu._id}}?_method=PUT" method="POST">
+    <div>
+        <label for="name">Name of the restaurant</label>
+        <input type="text" name="name" value="{{menu.name}}" />
+    </div>
+
+    <div>
+        <label for="category">Type of restaurant</label>
+        <input type="text" name="category" value="{{menu.category}}" />
+    </div>
+
+    <div>
+        <label for="picture">Picture</label>
+        <input type="text" name="picture" value="{{menu.picture}}" />        
+    </div>
+
+    <button type="submit">Update Menu</button>
+</form>

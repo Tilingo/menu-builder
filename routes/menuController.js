@@ -39,4 +39,12 @@ router.get('/:id', (req, res) => {
     })
 })
 
+router.get('/:id/edit', (req, res) => {
+  Menu
+    .findById(req.params.id)
+    .then((menu) => {
+      res.render('menu/edit', { menu })
+    })
+})
+
 module.exports = router;
