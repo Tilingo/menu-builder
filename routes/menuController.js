@@ -47,4 +47,10 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
+router.put('/:id', (req, res) => {
+  Menu.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
+    res.redirect(`/menu/${req.params.id}`)
+  })
+})
+
 module.exports = router;
