@@ -42,4 +42,18 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+//CONNECT MONGOOSE TO "donut_store"
+mongoose.connect('mongodb://localhost/menu_builder');
+
+//CREATE THE MONGOOSE CONNECTION
+const db = mongoose.connection;
+
+db.on('error', function (err) {
+    console.log(err);
+});
+
+db.once('open', function () {
+    console.log("Database has been connected!");
+});
+
 module.exports = app;
