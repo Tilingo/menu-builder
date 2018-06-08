@@ -46,7 +46,7 @@ router.get('/:id/edit', (req, res) => {
   Menu
     .findById(req.params.id)
     .then((menu) => {
-      res.render('menu/edit', { menu })
+      res.render('menu/edit', { menu, title: 'Edit menu' })
     })
 })
 

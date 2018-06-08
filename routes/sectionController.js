@@ -33,6 +33,25 @@ router.post('/', (req, res) => {
         })
 })
 
+router.get('/:id', function (req, res, next) {
+    Menu
+        .findById(req.params.menuId)
+        .then((menu) => {
+            function sectionIndex(element) {
+                return element._id == req.params.id;
+            }
+            let index = menu.menu_section.findIndex(sectionIndex)
+            // console.log(index)
+            const section = menu.menu_section[index]
+            res.render('section/show', {
+                title: `${section.name}`,
+                menu,
+                section
+            })
+        })
+        .catch((err) => res.send(err))
+});
+
 router.get('/:id/edit', (req, res) => {
     let ID = req.params.id
     console.log(ID)
@@ -65,6 +84,21 @@ router.put('/:id', (req, res) => {
     ).then(() => {
         res.redirect(`/menu/${req.params.menuId}`)
     })
+})
+
+router.delete('/:id', (req, res) => {
+    function sectionIndex(element) {
+        return element._id == req.params.id;
+    }
+
+    Menu.findById(req.params.menuId)
+        .then((menu) => {
+            let index = menu.menu_section.findIndex(sectionIndex)
+            const section = menu.menu_section[index]
+            section.remove()
+            menu.save()
+            res.redirect(`/menu/${req.params.menuId}`)
+        })
 })
 
 module.exports = router;

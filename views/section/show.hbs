@@ -1,0 +1,11 @@
+<h2>{{menu.name}} - Section </h2>
+<ul>
+
+    <a href="/menu/{{menu._id}}/section/{{section._id}}/edit" id="thisSection">
+        <h2>{{section.name}}</h2>
+    </a>    
+
+    <form action="/menu/{{menu._id}}/section/{{section._id}}?_method=DELETE" method="POST">
+        <button type="submit">Delete Section</button>
+    </form>
+</ul>

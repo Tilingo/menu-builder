@@ -1,5 +1,7 @@
 <h1>All Menus</h1>
 
+<a href="/menu/new">Create new menu</a>
+
 <ul>
     {{#each listOfMenus}}
     <li>
@@ -11,12 +13,14 @@
                 {{#each menu_items}}
                 <li>{{name}} ------------- ${{price}}</li>
                 <li>{{description}}</li>
-                {{!-- <img src="{{picture}}" alt="">  --}}
+                {{!--
+                <img src="{{picture}}" alt=""> --}} 
                 {{/each}}
             </ul>
             {{/each}}
         </ul>
-        {{!-- <img src="{{picture}}" alt=""> --}}
+        {{!--
+        <img src="{{picture}}" alt=""> --}}
     </li>
     <a href="/menu/{{_id}}">See this menu</a>
     {{/each}}
