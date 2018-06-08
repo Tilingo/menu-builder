@@ -1,5 +1,5 @@
 var express = require('express');
-var router = express.Router();
+const router = express.Router({ mergeParams: true })
 const Menu = require('../models/Menu')
 const Section = require('../models/MenuSection')
 const Item = require('../models/MenuItem')
@@ -35,7 +35,10 @@ router.get('/:id', (req, res) => {
   Menu
     .findById(req.params.id)
     .then((thisMenu) => {
-      res.render('menu/show', { thisMenu, title: `${thisMenu.name}'`})
+      res.render('menu/show', { 
+        thisMenu,
+        title: `${thisMenu.name}`,
+      })
     })
 })
 

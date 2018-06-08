@@ -1,0 +1,10 @@
+<h1>Edit "{{section.name}}" Section</h1>
+
+<form action="/menu/{{menu._id}}/section/{{ID}}?_method=PUT" method="POST">
+    <div>
+        <label for="name">Name of the section</label>
+        <input type="text" name="name" value="{{section.name}}" />
+    </div>
+
+    <button type="submit">Update Section</button>
+</form>

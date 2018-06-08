@@ -1,16 +1,20 @@
 <h2>{{thisMenu.name}} - {{thisMenu.category}}</h2>
 <ul>
     {{#each thisMenu.menu_section}}
-    <h2>{{name}}</h2>
-    <ul>
-        {{#each menu_items}}
-        <li>{{name}} ------------- ${{price}}</li>
-        <li>{{description}}</li>
-        {{!--
-        <img src="{{picture}}" alt=""> --}} {{/each}}
-    </ul>
+    <a href="/menu/{{../thisMenu._id}}/section/{{_id}}/edit" id="thisSection">
+        <h2>{{name}}</h2>
+    </a>    
+        <ul>
+            {{#each menu_items}}
+            <li>{{name}} ------------- ${{price}}</li>
+            <li>{{description}}</li>
+            {{!--
+            <img src="{{picture}}" alt=""> --}} 
+            {{/each}}
+        </ul>
     {{/each}}
     <a href="/menu/{{thisMenu._id}}/edit">Edit Menu</a>
+    <a href="/menu/{{thisMenu._id}}/section/new">Add Section</a>
     <form action="/menu/{{thisMenu._id}}?_method=DELETE" method="POST">
         <button type="submit">Delete Menu</button>
     </form>
