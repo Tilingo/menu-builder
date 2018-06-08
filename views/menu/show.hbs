@@ -3,15 +3,17 @@
     {{#each thisMenu.menu_section}}
     <a href="/menu/{{../thisMenu._id}}/section/{{_id}}" id="thisSection">
         <h2>{{name}}</h2>
-    </a>    
-        <ul>
-            {{#each menu_items}}
+    </a>
+    <ul>
+        {{#each menu_items}}
+        <a href="/menu/{{../../thisMenu._id}}/section/{{../_id}}/item/{{_id}}">
             <li>{{name}} ------------- ${{price}}</li>
             <li>{{description}}</li>
-            {{!--
-            <img src="{{picture}}" alt=""> --}} 
-            {{/each}}
-        </ul>
+        </a>
+        {{!--
+        <img src="{{picture}}" alt=""> --}} 
+        {{/each}}
+    </ul>
     {{/each}}
     <a href="/menu/{{thisMenu._id}}/edit">Edit Menu</a>
     <a href="/menu/{{thisMenu._id}}/section/new">Add Section</a>

@@ -18,20 +18,34 @@ router.post('/', (req, res) => {
     const item = new Item(req.body)
 
     // get menu by the id
-    Menu.findById(req.params.sectionID)
-        .then((restaurantSection) => {
+    Menu.findById(req.params.menuId)
+        .then((restaurantMenu) => {
 
             // push new section to menu
             restaurantMenu.menu_section.id(req.params.sectionID).menu_items.push(item)
 
             // save the section
-            return restaurantSection.save()
+            return restaurantMenu.save()
         })
         .then(() => {
 
             // redirect to comments
-            res.redirect(`/menu/${req.params.sectionId}`)
+            res.redirect(`/menu/`)
         })
 })
+
+router.get('/:id', function (req, res, next) {
+    Menu
+        .findById(req.params.menuId)
+        .then((menu) => {
+            const item = menu.menu_section.id(req.params.sectionID).menu_items.id(req.params.id)
+            res.render('item/show', {
+                title: `${item.name}`,
+                menu,
+                item
+            })
+        })
+        .catch((err) => res.send(err))
+});
 
 module.exports = router;
