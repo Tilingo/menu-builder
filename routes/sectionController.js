@@ -16,14 +16,14 @@ router.post('/', (req, res) => {
     // make comment req.body
     const section = new Section(req.body)
 
-    // get homework assignment by the id
+    // get menu by the id
     Menu.findById(req.params.menuId)
         .then((restaurantMenu) => {
 
-            // push new comment to comments
+            // push new section to menu
             restaurantMenu.menu_section.push(section)
 
-            // save the homework assignment
+            // save the section
             return restaurantMenu.save()
         })
         .then(() => {
@@ -39,11 +39,11 @@ router.get('/:id/edit', (req, res) => {
     Menu
         .findById(req.params.menuId)
         .then((menu) => {
-            function findIndex(element) {
+            function sectionIndex(element) {
                 return element._id == ID;
             }
-            let index = menu.menu_section.findIndex(findIndex)
-            console.log(index)
+            let index = menu.menu_section.findIndex(sectionIndex)
+            // console.log(index)
             const section = menu.menu_section[index]
             res.render('section/edit', {
                 title: "Edit Section",
@@ -54,13 +54,17 @@ router.get('/:id/edit', (req, res) => {
         })
 })
 
+router.put('/:id', (req, res) => {
+    Menu.findOneAndUpdate(
+        { "_id": req.params.menuId, "menu_section._id": req.params.id },
+        {
+            "$set": {
+                "menu_section.$": req.body
+            }
+        },
+    ).then(() => {
+        res.redirect(`/menu/${req.params.menuId}`)
+    })
+})
 
-// router.post('/', (req, res) => {
-//     const newMenu = req.body
-//     Section
-//       .create(newMenu)
-//       .then(() => {
-//         res.redirect('/menu')
-//       })
-//   })
 module.exports = router;
