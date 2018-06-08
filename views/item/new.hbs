@@ -1,0 +1,24 @@
+<h1>Create New Item</h1>
+
+<form action="/menu/{{menuId}}/section/{{sectionID}}" method="POST">
+    <div>
+        <label for="name">Name of the item</label>
+        <input type="text" name="name" placeholder="Item's name" />
+    </div>
+
+    <div>
+        <label for="description">Description of the item</label>
+        <input type="text" name="description" placeholder="Item's description" />
+    </div>
+
+    <div>
+        <label for="price">Price of the item</label>
+        <input type="text" name="price" placeholder="Item's price" />
+    </div>
+
+    <div>
+        <label for="image">Picture of the item</label>
+        <input type="text" name="image" placeholder="Item's picture URL" />
+    </div>
+    <button type="submit">Save Item</button>
+</form>

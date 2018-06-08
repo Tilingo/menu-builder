@@ -9,6 +9,7 @@ require('dotenv').config();
 //controllers
 var menuRouter = require('./routes/menuController');
 var sectionRouter = require('./routes/sectionController');
+var itemRouter = require('./routes/itemController');
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI); 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/menu', menuRouter);
 app.use('/menu/:menuId/section', sectionRouter);
+app.use('/menu/:menuId/section/:sectionID/item', itemRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
