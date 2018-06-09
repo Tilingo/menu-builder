@@ -1,0 +1,25 @@
+<h1>Edit "{{item.name}}"</h1>
+
+<form action="/menu/{{menu._id}}/section/{{section._id}}/item/{{item._id}}?_method=PUT" method="POST">
+    <div>
+        <label for="name">Item's name</label>
+        <input type="text" name="name" value="{{item.name}}" />
+    </div>
+
+    <div>
+        <label for="description">Item's description</label>
+        <input type="text" name="description" value="{{item.description}}" />
+    </div>
+
+    <div>
+        <label for="price">Item's price</label>
+        <input type="text" name="price" value="{{item.price}}" />
+    </div>
+
+    <div>
+        <label for="picture">Item's picture URL</label>
+        <input type="text" name="picture" value="{{item.picture}}" />
+    </div>
+
+    <button type="submit">Update Item</button>
+</form>
