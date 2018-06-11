@@ -1,27 +1,28 @@
-<h1>All Menus</h1>
+<section class="content">
 
-<a href="/menu/new">Create new menu</a>
+    <div class="bread-crumbs">
+        <div>
+            Home
+        </div>
+    </div>
 
-<ul>
-    {{#each listOfMenus}}
-    <li>
-        <h2>{{name}} - {{category}}</h2>
-        <ul>
-            {{#each menu_section}}
-            <h2>{{name}}</h2>
-            <ul>
-                {{#each menu_items}}
-                <li>{{name}} ------------- ${{price}}</li>
-                <li>{{description}}</li>
-                {{!--
-                <img src="{{picture}}" alt=""> --}} 
-                {{/each}}
-            </ul>
-            {{/each}}
-        </ul>
-        {{!--
-        <img src="{{picture}}" alt=""> --}}
-    </li>
-    <a href="/menu/{{_id}}">See this menu</a>
-    {{/each}}
-</ul>
+    <div class="title-wrap">
+        <h1>All Menus</h1>
+        <a href="/menu/new" class="newElement">Create new menu</a>
+    </div>
+
+    <ul class="menu-grid">
+        {{#each listOfMenus}}
+        <a href="/menu/{{_id}}">
+            <li class="menu-wrap">
+                <div class="menu-title">
+                    <h2>{{name}}</h2>
+                    <h3>{{category}}</h3>
+                </div>
+                <img src="{{picture}}" alt="" class="menu-image">
+            </li>
+        </a>
+        {{/each}}
+    </ul>
+
+</section>
