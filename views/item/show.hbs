@@ -1,11 +1,36 @@
-<h2>{{item.name}}</h2>
-<ul>
-    <a href="/menu/{{menu._id}}/section/{{section._id}}/item/{{item._id}}/edit">
-        <li>{{item.name}} ------------- ${{item.price}}</li>
-        <li>{{item.description}}</li>
-    </a>
-    <img src="{{item.picture}}" alt="">
-    <form action="/menu/{{menu._id}}/section/{{section._id}}/item/{{item._id}}?_method=DELETE" method="POST">
-        <button type="submit">Delete Item</button>
-    </form>
-</ul>
+<div class="bread-crumbs">
+    <div>
+        <a href="/menu/">Home / </a>
+        <a href="/menu/{{menu._id}}">{{menu.name}} / </a>
+        <a href="/menu/{{menu._id}}/section/{{section._id}}">{{section.name}} / </a> {{item.name}}
+    </div>
+</div>
+
+<section class="content">
+    <div class="new show">
+
+        <h1 class="title-wrap">{{item.name}}</h1>
+        <div class="show-name-price">
+            {{!--
+            <div>
+                <p>{{item.name}}</p>
+                <p>{{item.description}}</p>
+            </div>
+            <p>${{item.price}} </p> --}}
+            <div class="name-price">
+                <p>{{item.name}}</p>
+                <p>${{item.price}}</p>
+            </div>
+            <p>{{item.description}}</p>
+        </div>
+        <img src="{{item.picture}}" alt="">
+        <div class="menu-buttons">
+            <a href="/menu/{{menu._id}}/section/{{section._id}}/item/{{item._id}}/edit" class="button yellow-button">Edit</a>
+            <form action="/menu/{{menu._id}}/section/{{section._id}}/item/{{item._id}}?_method=DELETE" method="POST">
+                <button type="submit" class="button red-button">Delete</button>
+            </form>
+        </div>
+
+    </div>
+
+</section>
