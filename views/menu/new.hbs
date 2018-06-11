@@ -1,26 +1,28 @@
-<h1>Create New Menu</h1>
-
-<form action="/menu" method="POST">
+<div class="bread-crumbs">
     <div>
-        <label for="name">Name of the restaurant</label>
-        <input type="text" name="name" placeholder="Restaurant's name" />
+        <a href="/menu/">Home / </a> New Menu
     </div>
+</div>
 
-    <div>
-        <label for="category">Type of restaurant</label>
-        <input type="text" name="category" placeholder="Restaurant's type" />
-    </div>
+<section class="content">
+    <h1 class="title-wrap">Create New Menu</h1>
 
-    <div>
-        <label for="picture">Picture</label>
-        <input type="text" name="picture" placeholder="URL of the restaurant logo" />        
-    </div>
+    <form action="/menu" method="POST" class="new">
+        <div>
+            <label for="name">Name of the restaurant</label>
+            <input type="text" name="name" placeholder="Restaurant's name" />
+        </div>
 
-    <button type="submit">Save Menu</button>
-</form>
+        <div>
+            <label for="category">Type of restaurant</label>
+            <input type="text" name="category" placeholder="Restaurant's type" />
+        </div>
 
-{{!--
-<div>
-    <label for="description">Homework Description</label>
-    <textarea type="text" name="description" placeholder="Item description"></textarea>
-</div> --}}
+        <div>
+            <label for="picture">Picture</label>
+            <input type="text" name="picture" placeholder="URL of the restaurant logo" />
+        </div>
+
+        <button type="submit" class="button green-button">Save Menu</button>
+    </form>
+</section>

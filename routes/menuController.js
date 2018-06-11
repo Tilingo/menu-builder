@@ -18,7 +18,7 @@ router.get('/', function (req, res, next) {
 
 router.get('/new', (req, res) => {
   res.render('menu/new', {
-    title: "New Menu"
+    title: "New Menu",
   })
 })
 
