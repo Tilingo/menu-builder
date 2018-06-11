@@ -5,14 +5,17 @@
 </div>
 
 <section class="content">
-    <h1 class="title-wrap">Create New Section</h1>
+    <div class="new show">
+        <h1 class="title-wrap">Create New Section</h1>
 
-    <form action="/menu/{{menuId}}/section" method="POST" class="new">
-        <div>
-            <label for="name">Name of the section</label>
-            <input type="text" name="name" placeholder="Section's name" />
-        </div>
+        <form action="/menu/{{menuId}}/section" method="POST" >
+            <div>
+                <label for="name">Name of the section</label>
+                <input type="text" name="name" placeholder="Section's name" />
+            </div>
 
-        <button type="submit" class="button green-button">Save</button>
-    </form>
+            <button type="submit" class="button green-button">Save</button>
+        </form>
+    </div>
+
 </section>

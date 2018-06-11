@@ -40,7 +40,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 85vh;
+  min-height: 71vh;
 }
 
 .menu-grid {
@@ -236,7 +236,7 @@ footer {
 }
 
 .new {
-  width: 30%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   line-height: 1.5;
@@ -264,5 +264,16 @@ footer {
 input:focus {
   outline-color: #F24A8C;
   background-color: lightblue;
+}
+
+.show {
+  border: solid;
+  padding: 5%;
+  margin-top: 5%;
+  border-radius: 5px;
+  background-color: lightblue;
+  -webkit-box-shadow: 0px 6px 46px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 46px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 46px -3px rgba(0, 0, 0, 0.75);
 }
 /*# sourceMappingURL=style.css.map */
