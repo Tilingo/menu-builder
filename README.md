@@ -32,14 +32,11 @@ I chose to build a restaurant menu builder app. The idea behind it is to have a 
 * Update menu item
 * Delete menu item
 
-## Wireframe
-
 <details>
-<summary>How do I dropdown?</summary>
+<summary>Image of the wireframe</summary>
 <br>
-This is how you dropdown.
+!(https://github.com/Tilingo/menu-builder/blob/master/public/images/wireframe.jpg)
 <details>
-![Image of the wireframe](https://github.com/Tilingo/SIMON/blob/master/img/wireframeSimon.jpg)
 
 ## Future Development
 
