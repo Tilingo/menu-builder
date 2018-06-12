@@ -255,7 +255,7 @@ footer {
 
 .new {
   min-width: 30%;
-  max-width: 40%;
+  max-width: 90%;
   display: flex;
   flex-direction: column;
 }
@@ -322,7 +322,7 @@ input:focus {
     font-size: 0.8em;
   }
   .new {
-    font-size: 0.7em;
+    font-size: 5.7em;
   }
 }
 
@@ -345,6 +345,9 @@ input:focus {
 @media (min-width: 825px) and (max-width: 1100px) {
   .menu-grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .show {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=style.css.map */
