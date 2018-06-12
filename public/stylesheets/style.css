@@ -216,6 +216,7 @@ footer {
   padding: 1%;
   background-color: lightgrey;
   border-bottom: solid;
+  line-height: 1.5;
 }
 
 .button {
@@ -254,9 +255,9 @@ footer {
 
 .new {
   min-width: 30%;
+  max-width: 40%;
   display: flex;
   flex-direction: column;
-  line-height: 1.5;
 }
 
 .new button {
