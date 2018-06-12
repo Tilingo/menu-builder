@@ -33,9 +33,19 @@ I chose to build a restaurant menu builder app. The idea behind it is to have a 
 * Delete menu item
 
 <details>
-<summary>Image of the wireframe</summary>
+<summary>Wireframe</summary>
 <br>
+
 ![Image of Wireframe](https://github.com/Tilingo/menu-builder/blob/master/public/images/wireframe.jpg)
+
+</details>
+
+<details>
+<summary>ERD</summary>
+<br>
+
+![Image of Wireframe](https://github.com/Tilingo/menu-builder/blob/master/public/images/ERD.jpg)
+
 </details>
 
 ## Future Development
