@@ -35,6 +35,7 @@ I chose to build a restaurant menu builder app. The idea behind it is to have a 
 <details>
 <summary>Image of the wireframe</summary>
 <br>
+![Image of Wireframe]
 (https://github.com/Tilingo/menu-builder/blob/master/public/images/wireframe.jpg)
 </details>
 
