@@ -13,15 +13,16 @@
 
         {{!--
         <ul> --}} {{#each thisMenu.menu_section}}
-            <div class="thisSection">
+            <div class="thisSection bounce">
                 <a href="/menu/{{../thisMenu._id}}/section/{{_id}}">
                     <h2>{{name}}</h2>
                 </a>
             </div>
 
             {{#each menu_items}}
-            <div class="item">
-                <a href="/menu/{{../../thisMenu._id}}/section/{{../_id}}/item/{{_id}}">
+            <div class="item bounce">
+
+                <a href="/menu/{{../../thisMenu._id}}/section/{{../_id}}/item/{{_id}}" >
                     <div class="name-price">
                         <p>{{name}}</p>
                         <p>${{price}}</p>

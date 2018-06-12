@@ -10,20 +10,22 @@
     <div class="new show">
 
         <h1 class="title-wrap">{{item.name}}</h1>
-        <div class="show-name-price">
-            {{!--
-            <div>
-                <p>{{item.name}}</p>
+
+        <div class="menu-wrap item-show">
+
+            <div class="show-name-price">
+                <div class="name-price">
+                    <p>{{item.name}}</p>
+                    <p>${{item.price}}</p>
+                </div>
                 <p>{{item.description}}</p>
             </div>
-            <p>${{item.price}} </p> --}}
-            <div class="name-price">
-                <p>{{item.name}}</p>
-                <p>${{item.price}}</p>
-            </div>
-            <p>{{item.description}}</p>
+
+            <img src="{{item.picture}}" alt="" class="item-show-image">
+
         </div>
-        <img src="{{item.picture}}" alt="">
+
+
         <div class="menu-buttons">
             <a href="/menu/{{menu._id}}/section/{{section._id}}/item/{{item._id}}/edit" class="button yellow-button">Edit</a>
             <form action="/menu/{{menu._id}}/section/{{section._id}}/item/{{item._id}}?_method=DELETE" method="POST">
