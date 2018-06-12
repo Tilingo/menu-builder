@@ -9,6 +9,7 @@
     <div class="show">
          <h1 class="title-wrap">{{section.name}} - Section </h1>
         <div class="menu-buttons">
+            <a href="/menu/{{menu._id}}/section/{{section._id}}/item/new" class="button green-button">Create Item</a>
             <a href="/menu/{{menu._id}}/section/{{section._id}}/edit" class="button yellow-button">
                 Edit
             </a>
@@ -16,7 +17,6 @@
             <form action="/menu/{{menu._id}}/section/{{section._id}}?_method=DELETE" method="POST" class="button red-button">
                 <button type="submit">Delete</button>
             </form>
-            <a href="/menu/{{menu._id}}/section/{{section._id}}/item/new" class="button green-button">Add Item</a>
         </div>
     </div>
 </section>
