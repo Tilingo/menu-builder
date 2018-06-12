@@ -10,17 +10,17 @@
         <h1 class="title-wrap">Edit Menu</h1>
 
         <form action="/menu/{{menu._id}}?_method=PUT" method="POST" >
-            <div>
+            <div class="input">
                 <label for="name">Name of the restaurant</label>
                 <input type="text" name="name" value="{{menu.name}}" />
             </div>
 
-            <div>
+            <div class="input">
                 <label for="category">Type of restaurant</label>
                 <input type="text" name="category" value="{{menu.category}}" />
             </div>
 
-            <div>
+            <div class="input">
                 <label for="picture">Picture</label>
                 <input type="text" name="picture" value="{{menu.picture}}" />
             </div>

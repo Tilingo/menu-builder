@@ -11,33 +11,32 @@
             <h2>-{{thisMenu.category}}-</h2>
         </div>
 
-        {{!--
-        <ul> --}} {{#each thisMenu.menu_section}}
-            <div class="thisSection bounce">
-                <a href="/menu/{{../thisMenu._id}}/section/{{_id}}">
-                    <h2>{{name}}</h2>
-                </a>
-            </div>
+        {{#each thisMenu.menu_section}}
+        <div class="thisSection bounce">
+            <a href="/menu/{{../thisMenu._id}}/section/{{_id}}">
+                <h2>{{name}}</h2>
+            </a>
+        </div>
 
-            {{#each menu_items}}
-            <div class="item bounce">
+        {{#each menu_items}}
+        <div class="item bounce">
 
-                <a href="/menu/{{../../thisMenu._id}}/section/{{../_id}}/item/{{_id}}" >
-                    <div class="name-price">
-                        <p>{{name}}</p>
-                        <p>${{price}}</p>
-                    </div>
+            <a href="/menu/{{../../thisMenu._id}}/section/{{../_id}}/item/{{_id}}">
+                <div class="name-price">
+                    <p>{{name}}</p>
+                    <p>${{price}}</p>
+                </div>
 
-                    <p>{{description}}</p>
-                </a>
-            </div>
-            {{/each}}
+                <p>{{description}}</p>
+            </a>
+        </div>
+        {{/each}}
         </ul>
         {{/each}}
         <div class="menu-buttons">
             <a href="/menu/{{thisMenu._id}}/section/new" class="button green-button">Add Section</a>
             <a href="/menu/{{thisMenu._id}}/edit" class="button yellow-button">Edit Menu</a>
-            <form action="/menu/{{thisMenu._id}}?_method=DELETE" method="POST" class="button">
+            <form action="/menu/{{thisMenu._id}}?_method=DELETE" method="POST" class="button red-button">
                 <button type="submit">Delete Menu</button>
             </form>
         </div>

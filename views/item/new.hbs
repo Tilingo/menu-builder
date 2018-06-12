@@ -1,24 +1,37 @@
-<h1>Create New Item</h1>
-
-<form action="/menu/{{menuId}}/section/{{sectionID}}/item" method="POST">
+<div class="bread-crumbs">
     <div>
-        <label for="name">Name of the item</label>
-        <input type="text" name="name" placeholder="Item's name" />
+        <a href="/menu/">Home / </a>
+        <a href="/menu/{{menu._id}}">{{menu.name}} / </a>
+        <a href="/menu/{{menu._id}}/section/{{section._id}}">{{section.name}} / </a> New Item
+    </div>
+</div>
+
+<section class="content">
+    <div class="new show">
+        <h1 class="title-wrap">Create New Item</h1>
+
+        <form action="/menu/{{menuId}}/section/{{sectionID}}/item" method="POST">
+            <div class="input">
+                <label for="name">Name of the item</label>
+                <input type="text" name="name" placeholder="Item's name" />
+            </div>
+
+            <div class="input">
+                <label for="description">Description of the item</label>
+                <input type="text" name="description" placeholder="Item's description" />
+            </div>
+
+            <div class="input">
+                <label for="price">Price of the item</label>
+                <input type="text" name="price" placeholder="Item's price" />
+            </div>
+
+            <div class="input">
+                <label for="picture">Picture of the item</label>
+                <input type="text" name="picture" placeholder="Item's picture URL" />
+            </div>
+            <button type="submit" class="button green-button">Save Item</button>
+        </form>
     </div>
 
-    <div>
-        <label for="description">Description of the item</label>
-        <input type="text" name="description" placeholder="Item's description" />
-    </div>
-
-    <div>
-        <label for="price">Price of the item</label>
-        <input type="text" name="price" placeholder="Item's price" />
-    </div>
-
-    <div>
-        <label for="image">Picture of the item</label>
-        <input type="text" name="image" placeholder="Item's picture URL" />
-    </div>
-    <button type="submit">Save Item</button>
-</form>
+</section>

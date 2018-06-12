@@ -1,10 +1,23 @@
-<h1>Edit "{{section.name}}" Section</h1>
-
-<form action="/menu/{{menu._id}}/section/{{ID}}?_method=PUT" method="POST">
+<div class="bread-crumbs">
     <div>
-        <label for="name">Name of the section</label>
-        <input type="text" name="name" value="{{section.name}}" />
+        <a href="/menu/">Home / </a>
+        <a href="/menu/{{menu._id}}">{{menu.name}} / </a>
+        <a href="/menu/{{menu._id}}/section/{{section._id}}">{{section.name}} / </a> Edit
     </div>
+</div>
 
-    <button type="submit">Update Section</button>
-</form>
+<section class="content">
+    <div class="new show">
+        <h1 class="title-wrap">Edit Section</h1>
+
+    <form action="/menu/{{menu._id}}/section/{{ID}}?_method=PUT" method="POST">
+        <div class="input">
+            <label for="name">Name of the section</label>
+            <input type="text" name="name" value="{{section.name}}" />
+        </div>
+
+        <button type="submit" class="button green-button">Update</button>
+    </form>
+    </div>
+    
+</section>

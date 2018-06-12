@@ -1,25 +1,41 @@
-<h1>Edit "{{item.name}}"</h1>
+<div class="bread-crumbs">
+    <div>
+        <a href="/menu/">Home / </a>
+        <a href="/menu/{{menu._id}}">{{menu.name}} / </a>
+        <a href="/menu/{{menu._id}}/section/{{section._id}}">{{section.name}} / </a>
+        <a href="/menu/{{menu._id}}/section/{{section._id}}/item/{{item._id}}">{{item.name}} / </a> Edit Item
+    </div>
+</div>
+
+<section class="content">
+    
+    <div class="show new">
+        <h1 class="title-wrap">Edit Item</h1>
 
 <form action="/menu/{{menu._id}}/section/{{section._id}}/item/{{item._id}}?_method=PUT" method="POST">
-    <div>
+    <div class="input">
         <label for="name">Item's name</label>
         <input type="text" name="name" value="{{item.name}}" />
     </div>
 
-    <div>
+    <div class="input">
         <label for="description">Item's description</label>
         <input type="text" name="description" value="{{item.description}}" />
     </div>
 
-    <div>
+    <div class="input">
         <label for="price">Item's price</label>
         <input type="text" name="price" value="{{item.price}}" />
     </div>
 
-    <div>
+    <div class="input">
         <label for="picture">Item's picture URL</label>
         <input type="text" name="picture" value="{{item.picture}}" />
     </div>
 
-    <button type="submit">Update Item</button>
+    <button type="submit" class="button green-button">Update Item</button>
 </form>
+    </div>
+    
+</section>
+

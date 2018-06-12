@@ -5,11 +5,20 @@ const Section = require('../models/MenuSection');
 const Item = require('../models/MenuItem');
 
 router.get('/new', (req, res) => {
-    res.render('item/new', {
-        menuId: req.params.menuId,
-        tiitle: 'New Item',
-        sectionID: req.params.sectionID
-    })
+    Menu
+        .findById(req.params.menuId)
+        .then((menu) => {
+            const section = menu.menu_section.id(req.params.sectionID)
+
+            res.render('item/new', {
+                menuId: req.params.menuId,
+                tiitle: 'New Item',
+                sectionID: req.params.sectionID,
+                menu,
+                section
+            })
+        })
+
 })
 
 router.post('/', (req, res) => {

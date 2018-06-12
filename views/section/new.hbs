@@ -1,6 +1,7 @@
 <div class="bread-crumbs">
     <div>
-        <a href="/menu/">Home / </a> New Section
+        <a href="/menu/">Home / </a>
+        <a href="/menu/{{menuId}}">{{menu.name}} / </a> New Section
     </div>
 </div>
 
@@ -9,12 +10,12 @@
         <h1 class="title-wrap">Create New Section</h1>
 
         <form action="/menu/{{menuId}}/section" method="POST" >
-            <div>
+            <div class="input">
                 <label for="name">Name of the section</label>
                 <input type="text" name="name" placeholder="Section's name" />
             </div>
 
-            <button type="submit" class="button green-button">Save</button>
+            <button type="submit" class="button green-button">Create</button>
         </form>
     </div>
 

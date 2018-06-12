@@ -23,7 +23,6 @@ button
     background: none
     border: 0
     color: inherit
-    /* cursor: default; */
     font: inherit
     line-height: normal
     overflow: visible
@@ -32,6 +31,7 @@ button
     -webkit-user-select: none 
     -moz-user-select: none
     -ms-user-select: none
+    cursor: pointer
 
 header
     height: 10vh
@@ -213,7 +213,7 @@ footer
     -moz-box-shadow: inset 3px 0px 46px -8px rgba(0,0,0,0.75)
     box-shadow: inset 3px 0px 46px -8px rgba(0,0,0,0.75)
 
-.button:hover, button:hover
+.button:hover
     --webkit-box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.75) 
     -moz-box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.75)
     box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.75)
@@ -252,7 +252,9 @@ footer
 
 input:focus
     outline-color: #F24A8C
-    background-color: lightblue
+    background-color: #5b4238
+    color: lightgrey
+    padding-left: 1%
 
 
 .show
@@ -274,6 +276,34 @@ input:focus
 .item-show-image
     width: 100%
 
+@media (max-width: 500px)
+    .menu
+        font-size: 0.5em
+        height: 50vh
+        h2
+            height: 50px
+            display: flex
+            align-items: center
+            font-size: 2.5em
+    .bread-crumbs
+        font-size: 0.8em
+
+
+
+@media (max-width: 824px)
+    .menu-grid
+        grid-template-columns: 1fr
+
+    .menu
+        width: 90%
+
+
+
+
+@media (min-width: 825px) and (max-width: 1100px)
+    .menu-grid
+        grid-template-columns: 1fr 1fr
+        
 
     
 
