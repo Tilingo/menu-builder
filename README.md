@@ -6,7 +6,7 @@ This is my second project for WDI16 at General Assembly and my first full stack 
 
 I chose to build a restaurant menu builder app. The idea behind it is to have a website where restaurants owners can go an create and show their menus, that way is easy for people to see it. The menus are easy to create and edit, that allows restaurants to have their online menus updated without having to ask for a third party to do it.
 
-### [Live SIMON site](http://affectionate-shaw-bf2415.bitballoon.com/)
+### [Live SIMON site](https://menu-builder.herokuapp.com/)
 
 ## Technologies Used
 
