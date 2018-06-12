@@ -32,11 +32,11 @@ I chose to build a restaurant menu builder app. The idea behind it is to have a 
 * Update menu item
 * Delete menu item
 
-<details>
+<!-- <details>
 <summary>Image of the wireframe</summary>
-<br>
+<br> -->
 ![Image of Wireframe](https://github.com/Tilingo/menu-builder/blob/master/public/images/wireframe.jpg)
-</details>
+<!-- </details> -->
 
 ## Future Development
 
