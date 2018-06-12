@@ -307,6 +307,34 @@ input:focus {
   width: 100%;
 }
 
+.index-wrap {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.index-box {
+  width: 40%;
+  border: solid;
+  height: 47.5vh;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #096bb6 24%, white 88%);
+  -webkit-box-shadow: 0px 6px 46px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 46px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 46px -3px rgba(0, 0, 0, 0.75);
+  font-size: 3em;
+  font-family: 'Patua One', cursive;
+  text-shadow: 2px 2px #F24A8C;
+  text-align: center;
+}
+
+.brown {
+  background: linear-gradient(180deg, #5b4238 24%, white 88%);
+}
+
 @media (max-width: 500px) {
   .menu {
     font-size: 0.5em;
@@ -320,6 +348,9 @@ input:focus {
   }
   .bread-crumbs {
     font-size: 0.8em;
+  }
+  .content {
+    height: 100vh;
   }
   .new {
     font-size: 5.7em;
@@ -339,6 +370,22 @@ input:focus {
   .show {
     width: 80%;
     font-size: 0.5em;
+  }
+  .index-wrap {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .index-title {
+    margin: 10% 0;
+  }
+  .index-box {
+    width: 95%;
+    margin: 10% 0;
+  }
+  header {
+    justify-content: center;
+    padding: 0;
   }
 }
 

@@ -10,6 +10,7 @@ require('dotenv').config();
 var menuRouter = require('./routes/menuController');
 var sectionRouter = require('./routes/sectionController');
 var itemRouter = require('./routes/itemController');
+const indexRouter = require('./routes/indexController');
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI); 
@@ -27,6 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', indexRouter)
 app.use('/menu', menuRouter);
 app.use('/menu/:menuId/section', sectionRouter);
 app.use('/menu/:menuId/section/:sectionID/item', itemRouter);
