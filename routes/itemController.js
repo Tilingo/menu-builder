@@ -12,7 +12,7 @@ router.get('/new', (req, res) => {
 
             res.render('item/new', {
                 menuId: req.params.menuId,
-                tiitle: 'New Item',
+                title: 'New Item',
                 sectionID: req.params.sectionID,
                 menu,
                 section
@@ -23,22 +23,14 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res) => {
 
-    // make comment req.body
     const item = new Item(req.body)
 
-    // get menu by the id
     Menu.findById(req.params.menuId)
         .then((restaurantMenu) => {
-
-            // push new section to menu
             restaurantMenu.menu_section.id(req.params.sectionID).menu_items.push(item)
-
-            // save the section
             return restaurantMenu.save()
         })
         .then(() => {
-
-            // redirect to comments
             res.redirect(`/menu/${req.params.menuId}`)
         })
 })

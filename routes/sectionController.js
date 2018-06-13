@@ -10,7 +10,7 @@ router.get('/new', (req, res) => {
     .then((menu) => {
         res.render('section/new', {
             menuId: req.params.menuId,
-            tiitle: 'New Section',
+            title: 'New Section',
             menu
         }) 
     })
@@ -18,22 +18,14 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res) => {
 
-    // make comment req.body
     const section = new Section(req.body)
 
-    // get menu by the id
     Menu.findById(req.params.menuId)
         .then((restaurantMenu) => {
-
-            // push new section to menu
             restaurantMenu.menu_section.push(section)
-
-            // save the section
             return restaurantMenu.save()
         })
         .then(() => {
-
-            // redirect to comments
             res.redirect(`/menu/${req.params.menuId}`)
         })
 })
@@ -46,7 +38,6 @@ router.get('/:id', function (req, res, next) {
                 return element._id == req.params.id;
             }
             let index = menu.menu_section.findIndex(sectionIndex)
-            // console.log(index)
             const section = menu.menu_section[index]
             res.render('section/show', {
                 title: `${section.name}`,
@@ -67,7 +58,6 @@ router.get('/:id/edit', (req, res) => {
                 return element._id == ID;
             }
             let index = menu.menu_section.findIndex(sectionIndex)
-            // console.log(index)
             const section = menu.menu_section[index]
             res.render('section/edit', {
                 title: "Edit Section",
